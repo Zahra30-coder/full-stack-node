@@ -57,7 +57,7 @@ app.get("/api/movies", (req, res) => {
 app.post("/api/movies", (req, res) => {
   const newMovie = req.body;
 
-  if (!newMovie.title || !newMovie.director || !newMovie.release_date) {
+  if (!newMovie.title) {
     return res.status(400).json({ error: "Missing movie data" });
   }
 
